@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryDacunteIE1
 {
-    public partial class Form1 : Form
+    public partial class frmGrilla : Form
     {
-        public Form1()
+        public frmGrilla()
         {
             InitializeComponent();
         }
