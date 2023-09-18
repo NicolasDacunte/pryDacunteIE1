@@ -32,6 +32,7 @@ namespace pryDacunteIE1
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
+            progressBarLogo.Increment(5);
             if (progressBarLogo.Value < 100)
             {
                 progressBarLogo.Value++;
@@ -40,7 +41,7 @@ namespace pryDacunteIE1
             if (progressBarLogo.Value == 100)
             {
                 timer1.Enabled = false;
-                frmGrilla frmBuscar = new frmGrilla();
+                frmInicio frmBuscar = new frmInicio();
                 this.Hide();
                 frmBuscar.Show();
             }

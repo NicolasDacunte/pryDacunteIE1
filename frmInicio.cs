@@ -40,7 +40,7 @@ namespace pryDacunteIE1
             varContraseñaIng = txtContraseña.Text;
             if (varNomIng == varNom && varContraseñaIng == varContraseña)
             {
-                frmLogin frmEntrar = new frmLogin();
+                frmGrilla frmEntrar = new frmGrilla();
                 this.Hide();
                 frmEntrar.Show();
             }
