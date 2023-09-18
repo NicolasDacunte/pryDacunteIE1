@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,12 @@ namespace pryDacunteIE1
 {
     public partial class frmInicio : Form
     {
+        string varNom = "hola";
+        string varContraseña = "123";
+        string varNomIng;
+        string varContraseñaIng;
+
+
         public frmInicio()
         {
             InitializeComponent();
@@ -22,19 +29,20 @@ namespace pryDacunteIE1
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
-            if (progressBarLogo.Value < 100)
-            {
-                progressBarLogo.Value++;
-            }
+            txtContraseña.UseSystemPasswordChar = true;
+        }
 
-            if (progressBarLogo.Value == 100)
+        private void btnAcceder_Click_1(object sender, EventArgs e)
+        {
+            varNomIng = txtNombre.Text;
+            varContraseñaIng = txtContraseña.Text;
+            if (varNomIng == varNom && varContraseñaIng == varContraseña)
             {
-                timer1.Enabled = false;
-                frmGrilla frmBuscar = new frmGrilla();
+                frmLogin frmEntrar = new frmLogin();
                 this.Hide();
-                frmBuscar.Show();
+                frmEntrar.Show();
             }
         }
     }
