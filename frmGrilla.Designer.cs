@@ -28,35 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.dgv1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // treeView1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(248, 114);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.treeView1.Location = new System.Drawing.Point(12, 119);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(219, 398);
+            this.treeView1.TabIndex = 0;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            // 
+            // dgv1
+            // 
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Location = new System.Drawing.Point(293, 12);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.Size = new System.Drawing.Size(642, 505);
+            this.dgv1.TabIndex = 1;
             // 
             // frmGrilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(947, 522);
+            this.Controls.Add(this.dgv1);
+            this.Controls.Add(this.treeView1);
             this.Name = "frmGrilla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGrilla";
             this.Load += new System.EventHandler(this.frmGrilla_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.DataGridView dgv1;
     }
 }
