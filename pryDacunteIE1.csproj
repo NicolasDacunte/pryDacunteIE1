@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCargar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCargar.Designer.cs">
+      <DependentUpon>frmCargar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGrilla.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,8 +70,23 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificar.Designer.cs">
+      <DependentUpon>frmModificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCargar.resx">
+      <DependentUpon>frmCargar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGrilla.resx">
       <DependentUpon>frmGrilla.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +95,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificar.resx">
+      <DependentUpon>frmModificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

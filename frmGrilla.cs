@@ -119,5 +119,10 @@ namespace pryDacunteIE1
                 
             }
         }
+
+        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
