@@ -30,14 +30,36 @@
         {
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSeleccionarArchivo = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtJuridiccion = new System.Windows.Forms.TextBox();
+            this.txtJuzgado = new System.Windows.Forms.TextBox();
+            this.txtLiquidador = new System.Windows.Forms.TextBox();
+            this.txtNroExp = new System.Windows.Forms.TextBox();
+            this.txtApertura = new System.Windows.Forms.TextBox();
+            this.txtEntidad = new System.Windows.Forms.TextBox();
+            this.txtNro = new System.Windows.Forms.TextBox();
+            this.lblNomArch = new System.Windows.Forms.Label();
+            this.btnEliminarReg = new System.Windows.Forms.Button();
+            this.btnEditarReg = new System.Windows.Forms.Button();
+            this.btnAgregarReg = new System.Windows.Forms.Button();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEliminar
             // 
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(12, 643);
+            this.btnEliminar.Location = new System.Drawing.Point(488, 622);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(153, 41);
+            this.btnEliminar.Size = new System.Drawing.Size(109, 29);
             this.btnEliminar.TabIndex = 0;
             this.btnEliminar.Text = "Elminar Archivo";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -45,7 +67,7 @@
             // 
             // btnSeleccionarArchivo
             // 
-            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(12, 573);
+            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(213, 40);
             this.btnSeleccionarArchivo.Name = "btnSeleccionarArchivo";
             this.btnSeleccionarArchivo.Size = new System.Drawing.Size(153, 43);
             this.btnSeleccionarArchivo.TabIndex = 1;
@@ -53,16 +75,245 @@
             this.btnSeleccionarArchivo.UseVisualStyleBackColor = true;
             this.btnSeleccionarArchivo.Click += new System.EventHandler(this.btnSeleccionarArchivo_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(51, 516);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Columna 8";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(51, 472);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Columna 7";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(51, 428);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Columna 6";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(51, 384);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Columna 5";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(51, 340);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Columna 4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(51, 296);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Columna 3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(51, 252);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Columna 2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(51, 162);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "N°(columna 1):";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Enabled = false;
+            this.txtDireccion.Location = new System.Drawing.Point(146, 469);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(300, 20);
+            this.txtDireccion.TabIndex = 27;
+            this.txtDireccion.Text = "DIRECCION";
+            // 
+            // txtJuridiccion
+            // 
+            this.txtJuridiccion.Enabled = false;
+            this.txtJuridiccion.Location = new System.Drawing.Point(146, 418);
+            this.txtJuridiccion.Name = "txtJuridiccion";
+            this.txtJuridiccion.Size = new System.Drawing.Size(300, 20);
+            this.txtJuridiccion.TabIndex = 26;
+            this.txtJuridiccion.Text = "JURISDICCIÓN";
+            // 
+            // txtJuzgado
+            // 
+            this.txtJuzgado.Enabled = false;
+            this.txtJuzgado.Location = new System.Drawing.Point(146, 375);
+            this.txtJuzgado.Name = "txtJuzgado";
+            this.txtJuzgado.Size = new System.Drawing.Size(300, 20);
+            this.txtJuzgado.TabIndex = 25;
+            this.txtJuzgado.Text = "JUZGADO";
+            // 
+            // txtLiquidador
+            // 
+            this.txtLiquidador.Enabled = false;
+            this.txtLiquidador.Location = new System.Drawing.Point(146, 513);
+            this.txtLiquidador.Name = "txtLiquidador";
+            this.txtLiquidador.Size = new System.Drawing.Size(300, 20);
+            this.txtLiquidador.TabIndex = 28;
+            this.txtLiquidador.Text = "LIQUIDADOR RESPONSABLE";
+            // 
+            // txtNroExp
+            // 
+            this.txtNroExp.Enabled = false;
+            this.txtNroExp.Location = new System.Drawing.Point(146, 337);
+            this.txtNroExp.Name = "txtNroExp";
+            this.txtNroExp.Size = new System.Drawing.Size(300, 20);
+            this.txtNroExp.TabIndex = 24;
+            this.txtNroExp.Text = "Nº EXPEDIENTE";
+            // 
+            // txtApertura
+            // 
+            this.txtApertura.Enabled = false;
+            this.txtApertura.Location = new System.Drawing.Point(146, 293);
+            this.txtApertura.Name = "txtApertura";
+            this.txtApertura.Size = new System.Drawing.Size(300, 20);
+            this.txtApertura.TabIndex = 23;
+            this.txtApertura.Text = "APERTURA";
+            // 
+            // txtEntidad
+            // 
+            this.txtEntidad.Enabled = false;
+            this.txtEntidad.Location = new System.Drawing.Point(146, 249);
+            this.txtEntidad.Name = "txtEntidad";
+            this.txtEntidad.Size = new System.Drawing.Size(300, 20);
+            this.txtEntidad.TabIndex = 22;
+            this.txtEntidad.Text = "Entidad";
+            // 
+            // txtNro
+            // 
+            this.txtNro.Enabled = false;
+            this.txtNro.Location = new System.Drawing.Point(137, 159);
+            this.txtNro.Name = "txtNro";
+            this.txtNro.Size = new System.Drawing.Size(300, 20);
+            this.txtNro.TabIndex = 21;
+            // 
+            // lblNomArch
+            // 
+            this.lblNomArch.AutoSize = true;
+            this.lblNomArch.Location = new System.Drawing.Point(237, 86);
+            this.lblNomArch.Name = "lblNomArch";
+            this.lblNomArch.Size = new System.Drawing.Size(108, 13);
+            this.lblNomArch.TabIndex = 38;
+            this.lblNomArch.Text = "(archivo selecionado)";
+            // 
+            // btnEliminarReg
+            // 
+            this.btnEliminarReg.Enabled = false;
+            this.btnEliminarReg.Location = new System.Drawing.Point(338, 622);
+            this.btnEliminarReg.Name = "btnEliminarReg";
+            this.btnEliminarReg.Size = new System.Drawing.Size(109, 29);
+            this.btnEliminarReg.TabIndex = 39;
+            this.btnEliminarReg.Text = "Elminar registro";
+            this.btnEliminarReg.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarReg
+            // 
+            this.btnEditarReg.Enabled = false;
+            this.btnEditarReg.Location = new System.Drawing.Point(181, 622);
+            this.btnEditarReg.Name = "btnEditarReg";
+            this.btnEditarReg.Size = new System.Drawing.Size(109, 29);
+            this.btnEditarReg.TabIndex = 40;
+            this.btnEditarReg.Text = "Modificar registro";
+            this.btnEditarReg.UseVisualStyleBackColor = true;
+            this.btnEditarReg.Click += new System.EventHandler(this.btnEditarReg_Click);
+            // 
+            // btnAgregarReg
+            // 
+            this.btnAgregarReg.Enabled = false;
+            this.btnAgregarReg.Location = new System.Drawing.Point(38, 622);
+            this.btnAgregarReg.Name = "btnAgregarReg";
+            this.btnAgregarReg.Size = new System.Drawing.Size(109, 29);
+            this.btnAgregarReg.TabIndex = 41;
+            this.btnAgregarReg.Text = "Agregar registro";
+            this.btnAgregarReg.UseVisualStyleBackColor = true;
+            this.btnAgregarReg.Click += new System.EventHandler(this.btnAgregarReg_Click);
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Enabled = false;
+            this.btnIngresar.Location = new System.Drawing.Point(488, 154);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(109, 29);
+            this.btnIngresar.TabIndex = 42;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Enabled = false;
+            this.btnVolver.Location = new System.Drawing.Point(38, 682);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(70, 32);
+            this.btnVolver.TabIndex = 43;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 723);
+            this.ClientSize = new System.Drawing.Size(632, 726);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.btnIngresar);
+            this.Controls.Add(this.btnAgregarReg);
+            this.Controls.Add(this.btnEditarReg);
+            this.Controls.Add(this.btnEliminarReg);
+            this.Controls.Add(this.lblNomArch);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtJuridiccion);
+            this.Controls.Add(this.txtJuzgado);
+            this.Controls.Add(this.txtLiquidador);
+            this.Controls.Add(this.txtNroExp);
+            this.Controls.Add(this.txtApertura);
+            this.Controls.Add(this.txtEntidad);
+            this.Controls.Add(this.txtNro);
             this.Controls.Add(this.btnSeleccionarArchivo);
             this.Controls.Add(this.btnEliminar);
             this.Name = "frmModificar";
             this.Text = "frmModificar";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -70,5 +321,27 @@
 
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSeleccionarArchivo;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtJuridiccion;
+        private System.Windows.Forms.TextBox txtJuzgado;
+        private System.Windows.Forms.TextBox txtLiquidador;
+        private System.Windows.Forms.TextBox txtNroExp;
+        private System.Windows.Forms.TextBox txtApertura;
+        private System.Windows.Forms.TextBox txtEntidad;
+        private System.Windows.Forms.TextBox txtNro;
+        private System.Windows.Forms.Label lblNomArch;
+        private System.Windows.Forms.Button btnEliminarReg;
+        private System.Windows.Forms.Button btnEditarReg;
+        private System.Windows.Forms.Button btnAgregarReg;
+        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

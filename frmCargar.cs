@@ -22,12 +22,13 @@ namespace pryDacunteIE1
         
         
         FolderBrowserDialog fbd = new FolderBrowserDialog();
+        
         string rutaCarpeta;
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             //busca la carpeta
-
+            fbd.SelectedPath = @"C:\Users\sistema\source\repos\pryDacunteIE1\Resources\Proveedores";
             rutaCarpeta = string.Empty;
             if (fbd.ShowDialog() == DialogResult.OK)
             {

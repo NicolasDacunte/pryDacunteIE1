@@ -36,7 +36,7 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(38, 57);
+            this.btnCargar.Location = new System.Drawing.Point(43, 53);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(134, 36);
             this.btnCargar.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(38, 128);
+            this.btnBuscar.Location = new System.Drawing.Point(43, 124);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(134, 36);
             this.btnBuscar.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(38, 198);
+            this.btnModificar.Location = new System.Drawing.Point(43, 194);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(134, 36);
             this.btnModificar.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(38, 437);
+            this.btnVolver.Location = new System.Drawing.Point(43, 291);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(134, 36);
             this.btnVolver.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 513);
+            this.ClientSize = new System.Drawing.Size(228, 416);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBuscar);

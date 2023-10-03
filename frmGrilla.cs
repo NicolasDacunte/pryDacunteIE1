@@ -124,5 +124,12 @@ namespace pryDacunteIE1
         {
 
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmMenu frmEntrar = new frmMenu();
+            this.Hide();
+            frmEntrar.Show();
+        }
     }
 }
