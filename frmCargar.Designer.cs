@@ -269,6 +269,7 @@
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnCargarArchivo);
             this.Name = "frmCargar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCargar";
             this.Load += new System.EventHandler(this.frmCargar_Load);
             this.ResumeLayout(false);

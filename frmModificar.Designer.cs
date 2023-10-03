@@ -272,7 +272,6 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Enabled = false;
             this.btnVolver.Location = new System.Drawing.Point(38, 682);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(70, 32);
@@ -311,6 +310,7 @@
             this.Controls.Add(this.btnSeleccionarArchivo);
             this.Controls.Add(this.btnEliminar);
             this.Name = "frmModificar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmModificar";
             this.ResumeLayout(false);
             this.PerformLayout();

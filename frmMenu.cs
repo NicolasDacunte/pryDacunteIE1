@@ -42,5 +42,12 @@ namespace pryDacunteIE1
             this.Hide();
             frmEntrar.Show();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmInicio frmEntrar = new frmInicio();
+            this.Hide();
+            frmEntrar.Show();
+        }
     }
 }

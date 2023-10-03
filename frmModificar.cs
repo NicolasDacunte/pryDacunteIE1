@@ -79,9 +79,9 @@ namespace pryDacunteIE1
         private void btnAgregarReg_Click(object sender, EventArgs e)
         {
 
-            StreamWriter sw = new StreamWriter(rutaArchivo, true);
+            StreamWriter sw = new StreamWriter(rutaArchivo);
 
-            //como cotrolo que el numero no est{e ingresado??
+            //como controlo que el numero no este ingresado??
 
             string linea = txtNro.Text + ";" + txtEntidad.Text + ";" + txtApertura.Text + ";" + txtNroExp.Text + ";" + txtJuzgado.Text + ";" + txtJuridiccion.Text + ";" + txtDireccion.Text + ";" + txtLiquidador.Text;
             sw.WriteLine(linea);
@@ -187,7 +187,7 @@ namespace pryDacunteIE1
             if (!string.IsNullOrEmpty(txtNro.Text))//si lo contrario de nulo o vacio del txtnro
             {
                 string nroBuscado = txtNro.Text.Trim(); // Valor a buscar en txtNro
-
+                
                 using (StreamReader sr = new StreamReader(rutaArchivo))
                 {
                     string linea;
@@ -212,9 +212,21 @@ namespace pryDacunteIE1
                             // Termina el bucle ya que se encontró el registro
                             break;
                         }
+                        else
+                        {
+                            txtEntidad.Text = "";
+                            txtApertura.Text = "";
+                            txtNroExp.Text = "";
+                            txtJuzgado.Text = "";
+                            txtJuridiccion.Text = "";
+                            txtDireccion.Text = "";
+                            txtLiquidador.Text = "";
+                        }
+
                     }
                 }
-            }
+                
+            }                
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
