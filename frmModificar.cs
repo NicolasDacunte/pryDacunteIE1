@@ -235,6 +235,11 @@ namespace pryDacunteIE1
             this.Hide();
             frmEntrar.Show();
         }
+
+        private void frmModificar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

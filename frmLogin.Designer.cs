@@ -56,6 +56,7 @@
             this.ClientSize = new System.Drawing.Size(701, 357);
             this.Controls.Add(this.progressBarLogo);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
