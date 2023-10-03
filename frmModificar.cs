@@ -79,7 +79,7 @@ namespace pryDacunteIE1
         private void btnAgregarReg_Click(object sender, EventArgs e)
         {
 
-            StreamWriter sw = new StreamWriter(rutaArchivo);
+            StreamWriter sw = new StreamWriter(rutaArchivo, true);
 
             //como controlo que el numero no este ingresado??
 
