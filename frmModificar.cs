@@ -65,12 +65,18 @@ namespace pryDacunteIE1
         //borrar archivo seleccionado
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (File.Exists(rutaArchivo))
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de que desea borrar este archivo?", "Borrar Archivo", MessageBoxButtons.YesNo);
+            if (respuesta == DialogResult.Yes)
             {
-                File.Delete(rutaArchivo);
-            }
-            btnEliminar.Enabled = false;
-            MessageBox.Show("Se ha eliminado el archivo correctamente.");
+                if (File.Exists(rutaArchivo))
+                {
+                    File.Delete(rutaArchivo);
+                }
+                btnEliminar.Enabled = false;
+                MessageBox.Show("Se ha eliminado el archivo correctamente.");
+                
+            }   
+            
         }
 
 
@@ -179,9 +185,9 @@ namespace pryDacunteIE1
                 txtDireccion.Enabled = true;
                 txtLiquidador.Enabled = true;
                                
-                btnAgregarReg.Enabled = true;
-                btnIngresar.Enabled = true;
-                btnEditarReg.Enabled = true;
+                
+                
+                
 
             }
             if (!string.IsNullOrEmpty(txtNro.Text))//si lo contrario de nulo o vacio del txtnro
@@ -209,11 +215,16 @@ namespace pryDacunteIE1
                             txtDireccion.Text = parametros[6];
                             txtLiquidador.Text = parametros[7];
 
+                            btnAgregarReg.Enabled = false;
+                            btnEditarReg.Enabled = true;
+                            btnEliminarReg.Enabled = true;
                             // Termina el bucle ya que se encontró el registro
                             break;
                         }
                         else
                         {
+                            //si no existe el registro avisa y limpia los txt
+
                             txtEntidad.Text = "";
                             txtApertura.Text = "";
                             txtNroExp.Text = "";
@@ -221,8 +232,14 @@ namespace pryDacunteIE1
                             txtJuridiccion.Text = "";
                             txtDireccion.Text = "";
                             txtLiquidador.Text = "";
-                        }
+                            
 
+                            btnAgregarReg.Enabled = true;
+                            btnEditarReg.Enabled = false;
+                            btnEliminarReg.Enabled = false;
+                            
+
+                        }
                     }
                 }
                 
@@ -239,6 +256,70 @@ namespace pryDacunteIE1
         private void frmModificar_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEliminarReg_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro de que desea borrar este registro?", "Borrar Proveedor", MessageBoxButtons.YesNo);
+
+            //usuario ingresa el nro de registro a modificar
+            string nro = txtNro.Text;
+
+            //Es una lista
+            List<string> lineasArchivo = new List<string>();
+
+            using (StreamReader sr = new StreamReader(rutaArchivo))
+            {
+                // Lee la primer linea
+                string linea = sr.ReadLine();
+                //mientras la linea sea distinto de un valor nulo
+                while (linea != null)
+                {
+                    // Procesa la línea - separa cada campo de un registro
+                    parametros = linea.Split(';');
+
+                    //Copia todas las lineas que no coincide con el nro para sobreescribir el archivo sin la linea que quiero borrar
+                    if (parametros[0] != nro)
+                    {
+                        //a la lista le agrega el resto de las lineas
+                        lineasArchivo.Add(linea);
+                    }
+                    // sino si el numero coincide me agrega la linea con los campos editados
+                    else
+                    {
+                        lineasArchivo.Remove(linea); //borra la linea que es igual al nro ingresado por txt                        
+                        txtEntidad.Text = "";
+                        txtApertura.Text = "";
+                        txtNroExp.Text = "";
+                        txtJuzgado.Text = "";
+                        txtJuridiccion.Text = "";
+                        txtDireccion.Text = "";
+                        txtLiquidador.Text = "";
+                        txtEntidad.Enabled = false;
+                        txtApertura.Enabled = false;
+                        txtNroExp.Enabled = false;
+                        txtJuzgado.Enabled = false;
+                        txtJuridiccion.Enabled = false;
+                        txtDireccion.Enabled = false;
+                        txtLiquidador.Enabled = false;
+
+                        btnAgregarReg.Enabled = false;
+                        btnEditarReg.Enabled = false;
+                        btnEliminarReg.Enabled = false;
+                        MessageBox.Show("Se ha eliminado el registro correctamente.");
+                    }
+
+                    linea = sr.ReadLine();
+                }
+            }
+            //agrega al archivo la lista llamada lineasArchivo
+            using (StreamWriter sw = new StreamWriter(rutaArchivo))
+            {
+                foreach (string lineaSingular in lineasArchivo)
+                {
+                    sw.WriteLine(lineaSingular); // Escribe cada elemento en una línea del archivo
+                }
+            }
         }
     }
     

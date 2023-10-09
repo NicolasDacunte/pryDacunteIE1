@@ -58,11 +58,11 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(72)))), ((int)(((byte)(107)))));
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(252)))), ((int)(((byte)(205)))));
-            this.btnEliminar.Location = new System.Drawing.Point(488, 622);
+            this.btnEliminar.Location = new System.Drawing.Point(419, 58);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(109, 29);
+            this.btnEliminar.Size = new System.Drawing.Size(130, 38);
             this.btnEliminar.TabIndex = 0;
             this.btnEliminar.Text = "Elminar Archivo";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -71,11 +71,11 @@
             // btnSeleccionarArchivo
             // 
             this.btnSeleccionarArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(72)))), ((int)(((byte)(107)))));
-            this.btnSeleccionarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionarArchivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(252)))), ((int)(((byte)(205)))));
-            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(225, 40);
+            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(54, 25);
             this.btnSeleccionarArchivo.Name = "btnSeleccionarArchivo";
-            this.btnSeleccionarArchivo.Size = new System.Drawing.Size(153, 43);
+            this.btnSeleccionarArchivo.Size = new System.Drawing.Size(169, 43);
             this.btnSeleccionarArchivo.TabIndex = 1;
             this.btnSeleccionarArchivo.Text = "Seleccionar archivo";
             this.btnSeleccionarArchivo.UseVisualStyleBackColor = false;
@@ -235,35 +235,37 @@
             // lblNomArch
             // 
             this.lblNomArch.AutoSize = true;
-            this.lblNomArch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomArch.Location = new System.Drawing.Point(237, 86);
+            this.lblNomArch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomArch.Location = new System.Drawing.Point(404, 35);
             this.lblNomArch.Name = "lblNomArch";
-            this.lblNomArch.Size = new System.Drawing.Size(129, 13);
+            this.lblNomArch.Size = new System.Drawing.Size(179, 20);
             this.lblNomArch.TabIndex = 38;
             this.lblNomArch.Text = "(archivo selecionado)";
+            this.lblNomArch.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnEliminarReg
             // 
             this.btnEliminarReg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(72)))), ((int)(((byte)(107)))));
             this.btnEliminarReg.Enabled = false;
-            this.btnEliminarReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarReg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(252)))), ((int)(((byte)(205)))));
-            this.btnEliminarReg.Location = new System.Drawing.Point(338, 622);
+            this.btnEliminarReg.Location = new System.Drawing.Point(419, 581);
             this.btnEliminarReg.Name = "btnEliminarReg";
-            this.btnEliminarReg.Size = new System.Drawing.Size(109, 29);
+            this.btnEliminarReg.Size = new System.Drawing.Size(164, 45);
             this.btnEliminarReg.TabIndex = 39;
             this.btnEliminarReg.Text = "Elminar registro";
             this.btnEliminarReg.UseVisualStyleBackColor = false;
+            this.btnEliminarReg.Click += new System.EventHandler(this.btnEliminarReg_Click);
             // 
             // btnEditarReg
             // 
             this.btnEditarReg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(72)))), ((int)(((byte)(107)))));
             this.btnEditarReg.Enabled = false;
-            this.btnEditarReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarReg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(252)))), ((int)(((byte)(205)))));
-            this.btnEditarReg.Location = new System.Drawing.Point(178, 622);
+            this.btnEditarReg.Location = new System.Drawing.Point(228, 581);
             this.btnEditarReg.Name = "btnEditarReg";
-            this.btnEditarReg.Size = new System.Drawing.Size(118, 29);
+            this.btnEditarReg.Size = new System.Drawing.Size(169, 45);
             this.btnEditarReg.TabIndex = 40;
             this.btnEditarReg.Text = "Modificar registro";
             this.btnEditarReg.UseVisualStyleBackColor = false;
@@ -273,11 +275,11 @@
             // 
             this.btnAgregarReg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(72)))), ((int)(((byte)(107)))));
             this.btnAgregarReg.Enabled = false;
-            this.btnAgregarReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarReg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(252)))), ((int)(((byte)(205)))));
-            this.btnAgregarReg.Location = new System.Drawing.Point(38, 622);
+            this.btnAgregarReg.Location = new System.Drawing.Point(54, 581);
             this.btnAgregarReg.Name = "btnAgregarReg";
-            this.btnAgregarReg.Size = new System.Drawing.Size(109, 29);
+            this.btnAgregarReg.Size = new System.Drawing.Size(153, 45);
             this.btnAgregarReg.TabIndex = 41;
             this.btnAgregarReg.Text = "Agregar registro";
             this.btnAgregarReg.UseVisualStyleBackColor = false;
@@ -287,11 +289,11 @@
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(72)))), ((int)(((byte)(107)))));
             this.btnIngresar.Enabled = false;
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(252)))), ((int)(((byte)(205)))));
-            this.btnIngresar.Location = new System.Drawing.Point(488, 154);
+            this.btnIngresar.Location = new System.Drawing.Point(249, 185);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(109, 29);
+            this.btnIngresar.Size = new System.Drawing.Size(117, 38);
             this.btnIngresar.TabIndex = 42;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
