@@ -29,7 +29,7 @@ namespace pryDacunteIE1
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             //busca la carpeta
-            fbd.SelectedPath = @"C:\Users\sistema\source\repos\pryDacunteIE1\Resources\Proveedores"; //Application.StartupPath + "\\Proveedores";
+            fbd.SelectedPath =  Application.StartupPath + "\\Proveedores"; //@"C:\Users\sistema\source\repos\pryDacunteIE1\Resources\Proveedores";
 
             rutaCarpeta = string.Empty;
             if (fbd.ShowDialog() == DialogResult.OK)

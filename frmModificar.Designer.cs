@@ -241,7 +241,7 @@
             this.lblNomArch.Size = new System.Drawing.Size(179, 20);
             this.lblNomArch.TabIndex = 38;
             this.lblNomArch.Text = "(archivo selecionado)";
-            this.lblNomArch.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblNomArch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnEliminarReg
             // 
