@@ -72,6 +72,8 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(308, 20);
             this.txtContraseña.TabIndex = 16;
+            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged_1);
+            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
             // lblContra
             // 
@@ -94,6 +96,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(308, 20);
             this.txtNombre.TabIndex = 14;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblUsuario
             // 

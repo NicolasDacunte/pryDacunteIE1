@@ -15,6 +15,17 @@ namespace pryDacunteIE1
         public frmMenu()
         {
             InitializeComponent();
+
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
+        }
+
+        public void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
@@ -46,6 +57,13 @@ namespace pryDacunteIE1
         private void btnVolver_Click(object sender, EventArgs e)
         {
             frmInicio frmEntrar = new frmInicio();
+            this.Hide();
+            frmEntrar.Show();
+        }
+
+        private void btnSocios_Click(object sender, EventArgs e)
+        {
+            frmSocios frmEntrar = new frmSocios();
             this.Hide();
             frmEntrar.Show();
         }

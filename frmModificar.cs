@@ -11,6 +11,7 @@ using System.IO;
 using pryDacunteIE1.Properties;
 using System.Security.Cryptography;
 using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace pryDacunteIE1
 {
@@ -21,6 +22,17 @@ namespace pryDacunteIE1
         public frmModificar()
         {
             InitializeComponent();
+
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
+        }
+
+        public void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
         }
 
         OpenFileDialog ofd = new OpenFileDialog();
@@ -32,6 +44,8 @@ namespace pryDacunteIE1
         string directorioActual = Application.StartupPath;
 
         string nombreArch;
+        string leerLinea;
+        string[] separarDatos;
 
         private void btnSeleccionarArchivo_Click(object sender, EventArgs e)
         {
@@ -49,10 +63,45 @@ namespace pryDacunteIE1
             //ofd.Filter = "Carpetas|*.folder";
             rutaArchivo = string.Empty;
             //para seleccionar el archivo
+
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 rutaArchivo = ofd.FileName;
                 nombreArch = ofd.SafeFileName;
+
+                dgv1.Rows.Clear();
+                dgv1.Columns.Clear();
+
+                try
+                {
+                    string Archivo = Convert.ToString(rutaArchivo);
+                    string NombreArchivo = nombreArch;
+
+                    StreamReader sr = new StreamReader(Archivo);
+
+                    leerLinea = sr.ReadLine();
+                    separarDatos = leerLinea.Split(';');
+
+                    for (int indice = 0; indice < separarDatos.Length; indice++)
+                    {
+                        dgv1.Columns.Add(separarDatos[indice], separarDatos[indice]);
+                    }
+
+                    while (sr.EndOfStream == false)
+                    {
+                        leerLinea = sr.ReadLine();
+                        separarDatos = leerLinea.Split(';');
+                        dgv1.Rows.Add(separarDatos);
+                    }
+
+                    sr.Close();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Seleccione un archivo");
+                }
+
             }
             btnIngresar.Enabled = true;
             txtNro.Enabled = true;
@@ -74,9 +123,9 @@ namespace pryDacunteIE1
                 }
                 btnEliminar.Enabled = false;
                 MessageBox.Show("Se ha eliminado el archivo correctamente.");
-                
-            }   
-            
+
+            }
+
         }
 
 
@@ -105,6 +154,43 @@ namespace pryDacunteIE1
             txtJuridiccion.Enabled = false;
             txtDireccion.Enabled = false;
             txtLiquidador.Enabled = false;
+
+            dgv1.Rows.Clear();
+            dgv1.Columns.Clear();
+
+            try
+            {
+                string Archivo = Convert.ToString(rutaArchivo);
+                string NombreArchivo = nombreArch;
+
+                StreamReader sr = new StreamReader(Archivo);
+
+                leerLinea = sr.ReadLine();
+                separarDatos = leerLinea.Split(';');
+
+                for (int indice = 0; indice < separarDatos.Length; indice++)
+                {
+                    dgv1.Columns.Add(separarDatos[indice], separarDatos[indice]);
+                }
+
+                while (sr.EndOfStream == false)
+                {
+                    leerLinea = sr.ReadLine();
+                    separarDatos = leerLinea.Split(';');
+                    dgv1.Rows.Add(separarDatos);
+                }
+
+                sr.Close();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Seleccione un archivo");
+            }
+
+
+            txtNro.Focus();
+
         }
 
 
@@ -167,13 +253,47 @@ namespace pryDacunteIE1
             txtJuridiccion.Enabled = false;
             txtDireccion.Enabled = false;
             txtLiquidador.Enabled = false;
+
+            dgv1.Rows.Clear();
+            dgv1.Columns.Clear();
+
+            try
+            {
+                string Archivo = Convert.ToString(rutaArchivo);
+                string NombreArchivo = nombreArch;
+
+                StreamReader sr = new StreamReader(Archivo);
+
+                leerLinea = sr.ReadLine();
+                separarDatos = leerLinea.Split(';');
+
+                for (int indice = 0; indice < separarDatos.Length; indice++)
+                {
+                    dgv1.Columns.Add(separarDatos[indice], separarDatos[indice]);
+                }
+
+                while (sr.EndOfStream == false)
+                {
+                    leerLinea = sr.ReadLine();
+                    separarDatos = leerLinea.Split(';');
+                    dgv1.Rows.Add(separarDatos);
+                }
+
+                sr.Close();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Seleccione un archivo");
+            }
         }
+
+        
 
         //BOTON INGRESAR
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
-
+            
             if (txtNro.Text != "")
             {
                 
@@ -320,6 +440,44 @@ namespace pryDacunteIE1
                     sw.WriteLine(lineaSingular); // Escribe cada elemento en una línea del archivo
                 }
             }
+
+            dgv1.Rows.Clear();
+            dgv1.Columns.Clear();
+
+            try
+            {
+                string Archivo = Convert.ToString(rutaArchivo);
+                string NombreArchivo = nombreArch;
+
+                StreamReader sr = new StreamReader(Archivo);
+
+                leerLinea = sr.ReadLine();
+                separarDatos = leerLinea.Split(';');
+
+                for (int indice = 0; indice < separarDatos.Length; indice++)
+                {
+                    dgv1.Columns.Add(separarDatos[indice], separarDatos[indice]);
+                }
+
+                while (sr.EndOfStream == false)
+                {
+                    leerLinea = sr.ReadLine();
+                    separarDatos = leerLinea.Split(';');
+                    dgv1.Rows.Add(separarDatos);
+                }
+
+                sr.Close();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Seleccione un archivo");
+            }
+        }
+
+        private void lblNomArch_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

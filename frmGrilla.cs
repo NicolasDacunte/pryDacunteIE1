@@ -18,9 +18,18 @@ namespace pryDacunteIE1
         {
             InitializeComponent();
             LlenarTreeView();
+
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
         }
 
-       
+        public void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
+        }
 
         private void LlenarTreeView()
         {
