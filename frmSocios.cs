@@ -13,7 +13,7 @@ namespace pryDacunteIE1
     public partial class frmSocios : Form
     {
         clsSocios objBD;
-
+        
         public frmSocios()
         {
             InitializeComponent();
@@ -71,6 +71,21 @@ namespace pryDacunteIE1
             frmMenu frmEntrar = new frmMenu();
             this.Hide();
             frmEntrar.Show();
+        }
+        Int32 ID;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ID = Convert.ToInt32(txtID.Text);
+            objBD.ModificarEstado(ID);
+            MessageBox.Show("¡se ha cambiado el Estado con exito!");
+            dgv.Rows.Clear();
+            dgv.Columns.Clear();
+            objBD.TraerDatos(dgv);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

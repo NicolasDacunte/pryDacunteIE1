@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,8 @@ namespace pryDacunteIE1
 
         public string EstadoConexion = "";
         public string datosTabla;
-
+        public string ruta;
+        
         public void ConectarBD()
         {
             try
@@ -104,6 +106,81 @@ namespace pryDacunteIE1
                 }
             }
         }
+
+        public void ModificarEstado(int id)
+        {
+
+            OleDbCommand comando = new OleDbCommand();
+            OleDbDataAdapter adaptador;
+            DataSet objds = new DataSet();// objeto DataSetas usar
+
+            ConectarBD();
+            /*try
+            {                
+                conexionBD = new OleDbConnection();
+                conexionBD.ConnectionString = cadenaDeConexion;
+                conexionBD.Open();
+               
+            }
+            catch (Exception ex)
+            {
+                estadoDeConexion = "Error" + ex.Message;
+            }*/
+
+            // establecer las propiedades al objeto comando
+            comandoBD.Connection = conexionBD;
+            comandoBD.CommandType = CommandType.TableDirect;
+            //ELIGE EL AdeD
+            comandoBD.CommandText = "SOCIOS";
+            // crear el objeto DataAdapter pasando como parámetro el objeto comando que queremos vincular
+            adaptador = new OleDbDataAdapter(comandoBD);
+
+            // ejecutar la lectura del AdeD y almacenar su contenido en el dataAdapter
+
+            adaptador.Fill(objds, "SOCIOS");
+
+
+            // obtenemos una referencia a AdeD de SOCIOS
+            DataTable dt = objds.Tables["SOCIOS"];
+
+            // recorrer los registros del AdeD
+
+            foreach (DataRow registro in dt.Rows)
+            { // buscar el Socio con el ID ingresado por pantalla
+
+                if ((int)registro["CODIGO_SOCIO"] == id)
+                {
+                    // establecer el modo de edición del DataRow
+                    registro.BeginEdit();
+
+                    // asignamos el nuevo valor al estado del socio 
+                    if ((bool)registro["ESTADO"])
+                    {
+                        registro["ESTADO"] = false;
+                    }
+                    else
+                    {
+                        registro["ESTADO"] = true;
+                    }
+
+                    // finalizamos el modo edición sobre delDataRow
+                    registro.EndEdit();
+                    break;// salir del foreach
+                }
+
+
+            }
+            // creamos el objeto OledBCommandBuilder pasando como parámetro el DataAdapter
+            OleDbCommandBuilder cb = new OleDbCommandBuilder(adaptador);
+
+            // actualizamos la base con los cambios realizados
+
+            adaptador.Update(objds, "SOCIOS");
+
+            MessageBox.Show("Estado cambiado con éxito!!");
+
+        }
+
     }
 
 }
