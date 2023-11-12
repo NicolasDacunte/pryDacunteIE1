@@ -42,7 +42,7 @@ namespace pryDacunteIE1
 
         public void CargarLog(string varUsuario, DateTime varFecha, string varAccion)
         {
-            ConectarBD();
+            
             comando = new OleDbCommand();
 
             comando.Connection = conexion;

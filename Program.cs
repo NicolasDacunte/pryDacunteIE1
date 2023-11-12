@@ -16,7 +16,7 @@ namespace pryDacunteIE1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSocios ());
+            Application.Run(new frmInicio ());
         }
     }
 }

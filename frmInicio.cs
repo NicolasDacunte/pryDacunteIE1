@@ -69,14 +69,17 @@ namespace pryDacunteIE1
                 this.Hide();
                 frmEntrar.Show();
             }*/
+
             objInicio.IngresarUsuario(txtNombre.Text, txtContraseña.Text, this);
+            varFecha = DateTime.Now;
+            varAccion = "inicio de sesión";
+            objLogs.CargarLog(txtNombre.Text, varFecha, varAccion);
             txtNombre.Text = " ";
             txtContraseña.Text = "";
             txtNombre.Focus();
-            varFecha = DateTime.Now;
-            varAccion = "inicio de sesión";
+            
 
-            objLogs.CargarLog(txtNombre.Text,varFecha,varAccion); 
+             
 
         }
 
