@@ -17,7 +17,16 @@ namespace pryDacunteIE1
         public frmSocios()
         {
             InitializeComponent();
-            
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
+        }
+
+        public void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
         }
 
         private void frmSocios_Load(object sender, EventArgs e)

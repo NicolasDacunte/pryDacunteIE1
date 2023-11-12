@@ -15,7 +15,7 @@ namespace pryDacunteIE1
     public partial class frmInicio : Form
     {
         clsInicio objInicio;
-
+        clsLogs objLogs;
 
         //string varNom = "hola";
         //string varContraseña = "123";
@@ -29,6 +29,8 @@ namespace pryDacunteIE1
             objInicio = new clsInicio();
             objInicio.ConectarBD();
 
+            objLogs = new clsLogs();
+            objLogs.ConectarBD();
 
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
@@ -53,7 +55,10 @@ namespace pryDacunteIE1
         {
             txtContraseña.UseSystemPasswordChar = true;
         }
-        
+
+        DateTime varFecha;
+        string varAccion;
+
         private void btnAcceder_Click_1(object sender, EventArgs e)
         {
             /*varNomIng = txtNombre.Text;
@@ -68,7 +73,11 @@ namespace pryDacunteIE1
             txtNombre.Text = " ";
             txtContraseña.Text = "";
             txtNombre.Focus();
-            
+            varFecha = DateTime.Now;
+            varAccion = "inicio de sesión";
+
+            objLogs.CargarLog(txtNombre.Text,varFecha,varAccion); 
+
         }
 
         private void txtContraseña_TextChanged_1(object sender, EventArgs e)
