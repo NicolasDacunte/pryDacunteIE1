@@ -77,10 +77,10 @@ namespace pryDacunteIE1
         {
             ID = Convert.ToInt32(txtID.Text);
             objBD.ModificarEstado(ID);
-            MessageBox.Show("¡se ha cambiado el Estado con exito!");
             dgv.Rows.Clear();
             dgv.Columns.Clear();
             objBD.TraerDatos(dgv);
+            txtID.Text = "";
         }
 
         private void label1_Click(object sender, EventArgs e)

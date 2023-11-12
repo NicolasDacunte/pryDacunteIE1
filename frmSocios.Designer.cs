@@ -46,7 +46,7 @@
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(287, 0);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(704, 531);
+            this.dgv.Size = new System.Drawing.Size(807, 415);
             this.dgv.TabIndex = 0;
             // 
             // btnBuscar
@@ -91,7 +91,7 @@
             this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(145)))), ((int)(((byte)(151)))));
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(252)))), ((int)(((byte)(205)))));
-            this.btnVolver.Location = new System.Drawing.Point(12, 483);
+            this.btnVolver.Location = new System.Drawing.Point(12, 361);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(91, 38);
             this.btnVolver.TabIndex = 5;
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(988, 530);
+            this.ClientSize = new System.Drawing.Size(1093, 415);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCambiar);
@@ -152,6 +152,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgv);
             this.Name = "frmSocios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSocios";
             this.Load += new System.EventHandler(this.frmSocios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();

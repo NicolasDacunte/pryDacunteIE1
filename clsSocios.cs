@@ -51,6 +51,7 @@ namespace pryDacunteIE1
             grilla.Columns.Add("Edad", "Edad");
             grilla.Columns.Add("Ingreso", "Ingreso");
             grilla.Columns.Add("Puntaje", "Puntaje");
+            grilla.Columns.Add("Estado", "Estado");
 
             //leo como si fuera un archivo
             if (lectorBD.HasRows)
@@ -58,7 +59,9 @@ namespace pryDacunteIE1
                 while (lectorBD.Read())
                 {
                     datosTabla += "-" + lectorBD[0];
-                    grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
+                    // Comprueba si lectorBD[8] es true
+                    string estado = lectorBD.GetBoolean(8) ? "Activo" : "Inactivo";
+                    grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7], estado);
                 }
             }
         }
@@ -70,7 +73,7 @@ namespace pryDacunteIE1
             comandoBD = new OleDbCommand();
 
             comandoBD.Connection = conexionBD;
-            //q tipo de operacion quierp hacer y que me traiga TOD la tabla con el tabledirect
+            //q tipo de operacion quiero hacer y que me traiga TODA la tabla con el tabledirect
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
             //Que tabla traigo
             comandoBD.CommandText = "SOCIOS";
@@ -92,7 +95,9 @@ namespace pryDacunteIE1
 
                         grilla.Rows.Clear();
                         VarEncontrado = 1;
-                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
+                        // Comprueba si lectorBD[8] es true
+                        string estado = lectorBD.GetBoolean(8) ? "Activo" : "Inactivo";
+                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7], estado);
 
                         break;
                     }
@@ -177,7 +182,7 @@ namespace pryDacunteIE1
 
             adaptador.Update(objds, "SOCIOS");
 
-            MessageBox.Show("Estado cambiado con éxito!!");
+            MessageBox.Show("Estado cambiado con éxito.");
 
         }
 
