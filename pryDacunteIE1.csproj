@@ -50,11 +50,22 @@
     <Compile Include="clsLogin.cs" />
     <Compile Include="clsLogs.cs" />
     <Compile Include="clsSocios.cs" />
+    <Compile Include="EL_CLUBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EL_CLUBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmCargar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCargar.Designer.cs">
       <DependentUpon>frmCargar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearUsuario.Designer.cs">
+      <DependentUpon>frmCrearUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGrilla.cs">
       <SubType>Form</SubType>
@@ -97,6 +108,9 @@
     <EmbeddedResource Include="frmCargar.resx">
       <DependentUpon>frmCargar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearUsuario.resx">
+      <DependentUpon>frmCrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGrilla.resx">
       <DependentUpon>frmGrilla.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +139,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="EL_CLUBDataSet.xsc">
+      <DependentUpon>EL_CLUBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EL_CLUBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EL_CLUBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EL_CLUBDataSet.xss">
+      <DependentUpon>EL_CLUBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,6 +165,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EL_CLUB.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
