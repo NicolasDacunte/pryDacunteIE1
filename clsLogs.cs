@@ -76,7 +76,7 @@ namespace pryDacunteIE1
             // actualizamos la base con los cambios realizados
             adaptador.Update(objDataSet, "Logs");
             conexion.Close();
-
+            
         }
     }
 

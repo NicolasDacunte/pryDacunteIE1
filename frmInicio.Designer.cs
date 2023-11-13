@@ -34,6 +34,7 @@
             this.lblContra = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.btnRegistrarse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,16 +50,16 @@
             // 
             // btnAcceder
             // 
-            this.btnAcceder.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(145)))), ((int)(((byte)(151)))));
             this.btnAcceder.FlatAppearance.BorderSize = 0;
-            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcceder.ForeColor = System.Drawing.Color.Azure;
-            this.btnAcceder.Location = new System.Drawing.Point(125, 304);
+            this.btnAcceder.ForeColor = System.Drawing.Color.Navy;
+            this.btnAcceder.Location = new System.Drawing.Point(92, 279);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(137, 60);
+            this.btnAcceder.Size = new System.Drawing.Size(207, 46);
             this.btnAcceder.TabIndex = 17;
-            this.btnAcceder.Text = "Acceder";
+            this.btnAcceder.Text = "Iniciar Sesión";
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click_1);
             // 
@@ -109,6 +110,21 @@
             this.lblUsuario.TabIndex = 13;
             this.lblUsuario.Text = "USUARIO:";
             // 
+            // btnRegistrarse
+            // 
+            this.btnRegistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(145)))), ((int)(((byte)(151)))));
+            this.btnRegistrarse.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarse.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarse.ForeColor = System.Drawing.Color.Navy;
+            this.btnRegistrarse.Location = new System.Drawing.Point(118, 331);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(155, 25);
+            this.btnRegistrarse.TabIndex = 19;
+            this.btnRegistrarse.Text = "Crear nuevo usuario";
+            this.btnRegistrarse.UseVisualStyleBackColor = false;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,6 +132,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(145)))), ((int)(((byte)(151)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(379, 410);
+            this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.txtContraseña);
@@ -140,6 +157,7 @@
         private System.Windows.Forms.Label lblContra;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Button btnRegistrarse;
     }
 }
 

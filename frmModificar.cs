@@ -17,14 +17,15 @@ namespace pryDacunteIE1
 {
     public partial class frmModificar : Form
     {
+        string usuario;
 
-
-        public frmModificar()
+        public frmModificar(string varUsuario)
         {
             InitializeComponent();
-
+            string usuario = varUsuario;
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
+            this.usuario = usuario;
         }
 
         public void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
@@ -368,7 +369,7 @@ namespace pryDacunteIE1
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            frmMenu frmEntrar = new frmMenu();
+            frmMenu frmEntrar = new frmMenu(usuario);
             this.Hide();
             frmEntrar.Show();
         }

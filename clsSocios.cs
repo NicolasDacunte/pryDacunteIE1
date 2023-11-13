@@ -17,7 +17,7 @@ namespace pryDacunteIE1
 
         public string EstadoConexion = "";
         public string datosTabla;
-        public string ruta;
+        //public string ruta;
         
         public void ConectarBD()
         {

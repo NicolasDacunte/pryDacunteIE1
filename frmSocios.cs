@@ -13,10 +13,11 @@ namespace pryDacunteIE1
     public partial class frmSocios : Form
     {
         clsSocios objBD;
-        
-        public frmSocios()
+        string usuario;
+        public frmSocios(string varUsuario)
         {
             InitializeComponent();
+            string usuario = varUsuario;
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
         }
@@ -68,7 +69,7 @@ namespace pryDacunteIE1
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            frmMenu frmEntrar = new frmMenu();
+            frmMenu frmEntrar = new frmMenu(usuario);
             this.Hide();
             frmEntrar.Show();
         }

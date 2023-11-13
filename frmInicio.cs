@@ -19,8 +19,8 @@ namespace pryDacunteIE1
 
         //string varNom = "hola";
         //string varContraseña = "123";
-        string varNomIng;
-        string varContraseñaIng;
+        //string varNomIng;
+        //string varContraseñaIng;
 
 
         public frmInicio()
@@ -104,6 +104,13 @@ namespace pryDacunteIE1
                 btnAcceder_Click_1(sender, e);
                 e.Handled = true;
             }
+        }
+
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            frmCrearUsuario frmEntrar = new frmCrearUsuario();
+            this.Hide();
+            frmEntrar.Show();
         }
     }
 }

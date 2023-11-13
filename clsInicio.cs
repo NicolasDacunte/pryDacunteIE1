@@ -14,10 +14,10 @@ namespace pryDacunteIE1
         OleDbConnection conexionBD;
         OleDbCommand comandoBD;
         OleDbDataReader lectorBD;
-        clsLogin objLog;
+        clsLogs objLog;
 
         public string EstadoConexion = "";
-        public string datosTabla;
+        
 
         public void ConectarBD()
         {
@@ -59,14 +59,15 @@ namespace pryDacunteIE1
                 {
                     if (lectorBD[1].ToString() == varNombre && lectorBD[2].ToString() == varContraseña)
                     {
-                        //objLog = new clsLog();
+                        
+                        objLog = new clsLogs();
                         string varAccion = "Inicio Sesion";
                         DateTime varFecha = DateTime.Now;
 
-                        //objLog.CargarLog(varNombre, varFecha, varAccion);
+                        objLog.CargarLog(varNombre, varFecha, varAccion);
 
                         frmInicio.Hide();
-                        frmMenu frmCargar = new frmMenu();
+                        frmMenu frmCargar = new frmMenu(varNombre);
                         frmCargar.Show();
                         varEncontro++;
                         break;
@@ -82,7 +83,7 @@ namespace pryDacunteIE1
 
                 if (varContador >= 3)
                 {
-                    MessageBox.Show("Demaciados intentos de inicio de sesion, el sistema se cerrara");
+                    MessageBox.Show("Demasiados intentos de inicio de sesion, el sistema se cerrara");
                     Application.Exit();
 
                 }

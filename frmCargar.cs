@@ -14,10 +14,11 @@ namespace pryDacunteIE1
 {
     public partial class frmCargar : Form
     {
-        public frmCargar()
+        string Usuario;
+        public frmCargar(string varUsuario)
         {
             InitializeComponent();
-
+            string Usuario = varUsuario;
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
         }
@@ -87,10 +88,10 @@ namespace pryDacunteIE1
                 txtLiquidador.Text = "";
             }
         }
-
+        
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            frmMenu frmEntrar = new frmMenu();
+            frmMenu frmEntrar = new frmMenu(Usuario);
             this.Hide();
             frmEntrar.Show();
         }
