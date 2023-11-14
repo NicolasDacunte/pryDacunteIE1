@@ -34,13 +34,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbPerfil = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.eL_CLUBDataSet = new pryDacunteIE1.EL_CLUBDataSet();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eL_CLUBDataSet = new pryDacunteIE1.EL_CLUBDataSet();
+            this.label3 = new System.Windows.Forms.Label();
             this.usuariosTableAdapter = new pryDacunteIE1.EL_CLUBDataSetTableAdapters.UsuariosTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.eL_CLUBDataSet)).BeginInit();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eL_CLUBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -87,6 +88,16 @@
             this.cmbPerfil.ValueMember = "Perfil";
             this.cmbPerfil.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.eL_CLUBDataSet;
+            // 
+            // eL_CLUBDataSet
+            // 
+            this.eL_CLUBDataSet.DataSetName = "EL_CLUBDataSet";
+            this.eL_CLUBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -96,35 +107,36 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Tipo de perfil:";
             // 
-            // eL_CLUBDataSet
-            // 
-            this.eL_CLUBDataSet.DataSetName = "EL_CLUBDataSet";
-            this.eL_CLUBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataMember = "Usuarios";
-            this.usuariosBindingSource.DataSource = this.eL_CLUBDataSet;
-            // 
             // usuariosTableAdapter
             // 
             this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(103, 302);
+            this.button1.Location = new System.Drawing.Point(85, 264);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 23);
+            this.button1.Size = new System.Drawing.Size(154, 30);
             this.button1.TabIndex = 6;
             this.button1.Text = "Resgistrar Usuario";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(15, 315);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(68, 23);
+            this.btnVolver.TabIndex = 7;
+            this.btnVolver.Text = "cancelar";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmCrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 439);
+            this.ClientSize = new System.Drawing.Size(321, 345);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbPerfil);
@@ -136,8 +148,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCrearUsuario";
             this.Load += new System.EventHandler(this.frmCrearUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.eL_CLUBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eL_CLUBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +167,6 @@
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         private EL_CLUBDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

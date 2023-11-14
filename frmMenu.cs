@@ -13,14 +13,28 @@ namespace pryDacunteIE1
     public partial class frmMenu : Form
     {
         clsLogs objLogs;
-        string Usuario;
-        
+        public string Usuario;
+        public string perfil;
 
-        public frmMenu(string varUsuario)
+        public frmMenu(string varUsuario, string varPerfil)
         {
             InitializeComponent();
-                        
-            string Usuario = varUsuario;
+                          
+            Usuario = varUsuario;
+            perfil = varPerfil;
+            if (perfil == "admin")
+            {
+                btnBuscar.Visible = true;
+                btnCargar.Visible = true;
+                btnSocios.Visible = true;
+                btnModificar.Visible = true;
+            }
+            else
+            {
+                btnBuscar.Visible = true;
+                btnSocios.Visible = true;
+            }
+
             objLogs = new clsLogs();
             objLogs.ConectarBD();
             
@@ -28,6 +42,8 @@ namespace pryDacunteIE1
 
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
+            this.Usuario = varUsuario;
+            this.perfil = varPerfil;
         }
 
         public void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
@@ -41,6 +57,18 @@ namespace pryDacunteIE1
         private void frmMenu_Load(object sender, EventArgs e)
         {
 
+            if (perfil == "admin")
+            {
+                btnBuscar.Visible = true;
+                btnCargar.Visible = true;
+                btnSocios.Visible = true;
+                btnModificar.Visible = true;
+            }
+            else
+            {
+                btnBuscar.Visible = true;
+                btnSocios.Visible = true;
+            }
         }
         //buscar
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -48,7 +76,7 @@ namespace pryDacunteIE1
             DateTime fechaHora = DateTime.Now;
             string accion = "Ingresó a Buscar proveedores";
             objLogs.CargarLog(Usuario, fechaHora, accion);
-            frmGrilla frmEntrar = new frmGrilla(Usuario);
+            frmGrilla frmEntrar = new frmGrilla(Usuario,perfil);
             this.Hide();
             frmEntrar.Show();
         }
@@ -58,7 +86,7 @@ namespace pryDacunteIE1
             DateTime fechaHora = DateTime.Now;
             string accion = "Ingresó a Cargar un nuevo archivo";
             objLogs.CargarLog(Usuario, fechaHora, accion);
-            frmCargar frmEntrar = new frmCargar(Usuario);
+            frmCargar frmEntrar = new frmCargar(Usuario, perfil);
             this.Hide();
             frmEntrar.Show();
         }
@@ -68,7 +96,7 @@ namespace pryDacunteIE1
             DateTime fechaHora = DateTime.Now;
             string accion = "Ingresó a Modificar archivo";
             objLogs.CargarLog(Usuario, fechaHora, accion);
-            frmModificar frmEntrar = new frmModificar(Usuario);
+            frmModificar frmEntrar = new frmModificar(Usuario, perfil);
             this.Hide();
             frmEntrar.Show();
         }
@@ -90,7 +118,7 @@ namespace pryDacunteIE1
             objLogs.CargarLog(Usuario, fechaHora, accion);
 
 
-            frmSocios frmEntrar = new frmSocios(Usuario);
+            frmSocios frmEntrar = new frmSocios(Usuario, perfil);
             this.Hide();
             frmEntrar.Show();
         }

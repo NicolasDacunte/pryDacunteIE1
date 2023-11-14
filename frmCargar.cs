@@ -15,12 +15,16 @@ namespace pryDacunteIE1
     public partial class frmCargar : Form
     {
         string Usuario;
-        public frmCargar(string varUsuario)
+        string perfil;
+        public frmCargar(string varUsuario, string varPerfil)
         {
             InitializeComponent();
             string Usuario = varUsuario;
+            string perfil = varPerfil;
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
+            this.Usuario = Usuario;
+            this.perfil = perfil;
         }
 
         public void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
@@ -91,7 +95,7 @@ namespace pryDacunteIE1
         
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            frmMenu frmEntrar = new frmMenu(Usuario);
+            frmMenu frmEntrar = new frmMenu(Usuario,perfil);
             this.Hide();
             frmEntrar.Show();
         }

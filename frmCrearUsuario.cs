@@ -56,6 +56,16 @@ namespace pryDacunteIE1
                     MessageBox.Show("NECESITA COMPLETAR LOS CAMPOS ´USUARIO´ Y ´CONTRASEÑA´");
                 }
             }
+            frmInicio frmEntrar = new frmInicio();
+            this.Hide();
+            frmEntrar.Show();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmInicio frmEntrar = new frmInicio();
+            this.Hide();
+            frmEntrar.Show();
         }
     }
 }

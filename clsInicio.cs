@@ -63,13 +63,17 @@ namespace pryDacunteIE1
                         objLog = new clsLogs();
                         string varAccion = "Inicio Sesion";
                         DateTime varFecha = DateTime.Now;
-
+                        string varPerfil = lectorBD[3].ToString();
                         objLog.CargarLog(varNombre, varFecha, varAccion);
 
                         frmInicio.Hide();
-                        frmMenu frmCargar = new frmMenu(varNombre);
+                        frmMenu frmCargar = new frmMenu(varNombre,varPerfil);
                         frmCargar.Show();
                         varEncontro++;
+                        
+                        
+                        conexionBD.Close();
+                        
                         break;
                     }
                     
@@ -88,6 +92,8 @@ namespace pryDacunteIE1
 
                 }
             }
+
+            
 
         }
 

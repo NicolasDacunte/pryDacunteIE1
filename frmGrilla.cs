@@ -15,14 +15,17 @@ namespace pryDacunteIE1
     public partial class frmGrilla : Form
     {
         string usuario;
-        public frmGrilla(string varUsuario)
+        string perfil;
+        public frmGrilla(string varUsuario, string varPerfil)
         {
             InitializeComponent();
             LlenarTreeView();
             string usuario = varUsuario;
+            string perfil = varPerfil;
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
             this.usuario = usuario;
+            this.perfil = perfil;
         }
 
         public void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
@@ -138,7 +141,7 @@ namespace pryDacunteIE1
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            frmMenu frmEntrar = new frmMenu(usuario);
+            frmMenu frmEntrar = new frmMenu(usuario,perfil);
             this.Hide();
             frmEntrar.Show();
         }
